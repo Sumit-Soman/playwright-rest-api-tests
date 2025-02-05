@@ -31,6 +31,6 @@ jobs:
     - name: Publish generated content to GitHub Pages
       uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
       with:
-        dir: dist
+        dir: playwright-report
         branch: gh-pages
         token: ${{ secrets.GITHUB_TOKEN }}
