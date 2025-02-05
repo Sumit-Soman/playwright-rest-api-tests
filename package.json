@@ -2,7 +2,9 @@
   "name": "playwright-rest-api-tests",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "download:chromium": "npx playwright install chromium"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

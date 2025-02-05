@@ -17,7 +17,7 @@ jobs:
       run: npm ci
 
     - name: Install Dependencies for Playwright Tests
-      run: npx playwright install --with-deps
+      run: npx playwright install --with-deps chromium
 
     - name: Run Playwright tests
       run: npx playwright test
@@ -28,3 +28,8 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+    - name: Publish Playwright Report to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: main  # Deploy to GitHub Pages branch
+        folder: playwright-report  # Path to the report directory
